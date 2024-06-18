@@ -1,9 +1,16 @@
+# Folders
 Binaries
 DerivedDataCache
 Intermediate
 Saved
 .vscode
 .vs
+Content/Assets
+Content/Collections
+Content/Developers
+Content/Maps
+
+# Files
 *.VC.db
 *.opensdf
 *.opendb
