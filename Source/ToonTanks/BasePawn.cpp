@@ -4,6 +4,9 @@
 ABasePawn::ABasePawn()
 {
  	PrimaryActorTick.bCanEverTick = true;
+
+	CapsuleComp = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Capsule Collider"));
+	RootComponent = CapsuleComp;
 }
 
 void ABasePawn::BeginPlay()
