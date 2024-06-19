@@ -20,6 +20,7 @@ protected:
 private:
 	void Move(float scalar);
 	void Turn(float scalar);
+	void Rotate(float scalar);
 
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	class USpringArmComponent* SpringArm;
@@ -28,8 +29,8 @@ private:
 	class UCameraComponent* Camera;
 
 	UPROPERTY(EditAnywhere, Category = "Player Control")
-	float moveSpeed = 1;
+	float moveSpeed = 10;
 
 	UPROPERTY(EditAnywhere, Category = "Player Control")
-	float turnSpeed = 1;
+	float turnSpeed = 10;
 };
