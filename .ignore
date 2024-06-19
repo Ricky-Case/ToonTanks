@@ -1,20 +1,6 @@
-# Folders
-Binaries
-DerivedDataCache
-Intermediate
-Saved
-.vscode
-.vs
-Content/Assets
-Content/Collections
-Content/Developers
-
-# Files
-*.VC.db
-*.opensdf
-*.opendb
-*.sdf
-*.sln
-*.suo
-*.xcodeproj
-*.xcworkspace
+/.git
+/.vscode
+/Content
+/DerivedDataCache
+/Intermediate
+/Saved
