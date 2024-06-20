@@ -27,7 +27,4 @@ private:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	USceneComponent* ProjectileSpawn;
-
-public:
-	virtual void Tick(float DeltaTime) override;
 };

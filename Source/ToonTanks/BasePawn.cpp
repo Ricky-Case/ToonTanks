@@ -22,8 +22,3 @@ void ABasePawn::BeginPlay()
 {
 	Super::BeginPlay();
 }
-
-void ABasePawn::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-}
