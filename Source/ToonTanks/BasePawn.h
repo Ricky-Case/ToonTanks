@@ -14,17 +14,20 @@ public:
 
 protected:
 	virtual void BeginPlay() override;
+	void RotateTurret(FVector TargetLocation, float DeltaTime);
 
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	class UCapsuleComponent* Capsule;
-
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	UStaticMeshComponent* BaseMesh;
-	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	UStaticMeshComponent* TurretMesh;
-
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	USceneComponent* ProjectileSpawn;
+
+	UPROPERTY(EditAnywhere, Category = "Player Control")
+	float rotateTurretSpeed = 10.0f;
+	UPROPERTY(EditAnywhere, Category = "Player Control")
+	float rotateTurretSpeedMod = 1.0f;
 };

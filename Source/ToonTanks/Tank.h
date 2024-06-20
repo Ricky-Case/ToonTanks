@@ -31,13 +31,13 @@ private:
 	class UCameraComponent* Camera;
 
 	UPROPERTY(EditAnywhere, Category = "Player Control")
-	float moveSpeed = 10;
+	float moveSpeed = 10.0f;
 
 	UPROPERTY(EditAnywhere, Category = "Player Control")
-	float turnSpeed = 10;
+	float moveSpeedModifier = 10;
 
 	UPROPERTY(EditAnywhere, Category = "Player Control")
-	int32 moveSpeedModifier = 10;
+	float turnSpeed = 10.0f;
 
 	UPROPERTY(EditAnywhere, Category = "Player Control")
 	float turnSpeedModifier = 2.5;

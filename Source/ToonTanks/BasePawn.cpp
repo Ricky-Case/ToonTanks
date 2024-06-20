@@ -1,5 +1,6 @@
 #include "BasePawn.h"
 #include "Components/CapsuleComponent.h"
+// #include "Kismet/GamepolayStatics.h"
 
 ABasePawn::ABasePawn()
 {
@@ -21,4 +22,20 @@ ABasePawn::ABasePawn()
 void ABasePawn::BeginPlay()
 {
 	Super::BeginPlay();
+
+	rotateTurretSpeed *= rotateTurretSpeedMod;
+}
+
+void ABasePawn::RotateTurret(FVector TargetLocation, float DeltaTime)
+{
+	FVector ToTarget = TargetLocation - TurretMesh->GetComponentLocation();
+	FRotator LookRotation = FRotator(0.0f, ToTarget.Rotation().Yaw, 0.0f);
+	TurretMesh->SetWorldRotation(
+		FMath::RInterpTo(
+			TurretMesh->GetComponentRotation(),
+			LookRotation,
+			DeltaTime,
+			rotateTurretSpeed
+		)
+	);
 }
