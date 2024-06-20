@@ -19,3 +19,4 @@ Content/Developers
 *.xcodeproj
 *.xcworkspace
 .fake
+ToonTanks.code-workspace

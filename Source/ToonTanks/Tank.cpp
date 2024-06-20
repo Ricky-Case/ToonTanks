@@ -14,8 +14,12 @@ ATank::ATank()
 
 void ATank::BeginPlay()
 {
-	moveSpeed *= 10;
-	turnSpeed *= 2.5;
+	Super::BeginPlay();
+
+	moveSpeed *= moveSpeedModifier;
+	turnSpeed *= turnSpeedModifier;
+
+	PlayerControllerRef = Cast<APlayerController>(GetController());
 }
 
 void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)

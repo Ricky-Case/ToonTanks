@@ -33,4 +33,12 @@ private:
 
 	UPROPERTY(EditAnywhere, Category = "Player Control")
 	float turnSpeed = 10;
+
+	UPROPERTY(EditAnywhere, Category = "Player Control")
+	int32 moveSpeedModifier = 10;
+
+	UPROPERTY(EditAnywhere, Category = "Player Control")
+	float turnSpeedModifier = 2.5;
+
+	APlayerController* PlayerControllerRef;
 };
