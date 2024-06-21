@@ -21,8 +21,16 @@ protected:
 	virtual void BeginPlay() override;
 	
 private:
+	void CheckFireCondition();
+	bool InFireRange();
+
+	class ATank* Tank;
+
+	FTimerHandle FireRateTimerHandle;
+
 	UPROPERTY(EditAnywhere, Category = "AI Control")
 	float fireRange = 1000.0f;
 
-	class ATank* Tank;
+	UPROPERTY(EditAnywhere, Category = "AI Control")
+	float fireRate = 2.0f;
 };
