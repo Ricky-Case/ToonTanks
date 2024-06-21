@@ -15,6 +15,7 @@ public:
 protected:
 	virtual void BeginPlay() override;
 	void RotateTurret(FVector TargetLocation, float DeltaTime);
+	void Fire();
 
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))

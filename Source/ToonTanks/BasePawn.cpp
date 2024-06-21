@@ -1,6 +1,6 @@
 #include "BasePawn.h"
 #include "Components/CapsuleComponent.h"
-// #include "Kismet/GamepolayStatics.h"
+#include "DrawDebugHelpers.h"
 
 ABasePawn::ABasePawn()
 {
@@ -37,5 +37,18 @@ void ABasePawn::RotateTurret(FVector TargetLocation, float DeltaTime)
 			DeltaTime,
 			rotateTurretSpeed
 		)
+	);
+}
+
+void ABasePawn::Fire()
+{
+	DrawDebugSphere(
+		GetWorld(),
+		ProjectileSpawn->GetComponentLocation(),
+		25.0f,
+		8,
+		FColor::Red,
+		false,
+		3.0f
 	);
 }
