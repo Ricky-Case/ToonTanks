@@ -16,8 +16,13 @@ class TOONTANKS_API ATower : public ABasePawn
 
 public:
 	virtual void Tick(float DeltaTime) override;
+
+protected:
+	virtual void BeginPlay() override;
 	
 private:
 	UPROPERTY(EditAnywhere, Category = "AI Control")
-	float firingRange = 500.0f;
+	float fireRange = 1000.0f;
+
+	class ATank* Tank;
 };

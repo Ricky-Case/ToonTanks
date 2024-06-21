@@ -2,13 +2,29 @@
 
 
 #include "Tower.h"
+#include "Kismet/GameplayStatics.h"
+#include "Tank.h"
 
 void ATower::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	// Find distance to tank.
+	if(Tank)
+	{
+		float distance = FVector::Dist(GetActorLocation(), Tank->GetActorLocation());
 
-	// If tank is in range...
-		// Rotate turret towards tank.
+		// If tank is in range...
+		if(distance <= fireRange)
+		{
+			// Rotate turret towards tank.
+			RotateTurret(Tank->GetActorLocation(), DeltaTime);
+		}
+	}
+}
+
+void ATower::BeginPlay()
+{
+	Super::BeginPlay();
+
+	Tank = Cast<ATank>(UGameplayStatics::GetPlayerPawn(this, 0));
 }

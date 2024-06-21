@@ -29,7 +29,6 @@ void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 	PlayerInputComponent->BindAxis(TEXT("MoveForward"), this, &ATank::Move);
 	PlayerInputComponent->BindAxis(TEXT("Turn"), this, &ATank::Turn);
-	// PlayerInputComponent->BindAxis(TEXT("RotateTurret"), this, &ATank::Rotate);
 }
 
 void ATank::Tick(float DeltaTime)
@@ -82,14 +81,3 @@ void ATank::Turn(float scalar)
 		AddActorLocalRotation(FRotator(0.0, scalar, 0.0) * turnSpeed * timeScale);
 	}
 }
-
-// void ATank::Rotate(float scalar)
-// {
-// 	if(scalar != 0.0f)
-// 	{
-// 		UE_LOG(LogTemp, Warning, TEXT("Scalar Value: %f"), scalar);
-
-// 		float timeScale = UGameplayStatics::GetWorldDeltaSeconds(this); // Using DeltaTime to regulate speed
-// 		// AddActorLocalRotation(FRotator(0.0, scalar, 0.0) * turnSpeed * timeScale);
-// 	}
-// }
