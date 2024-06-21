@@ -33,11 +33,12 @@ void AProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimi
 	UE_LOG(LogTemp, Warning, TEXT("Hit Component: %s"), *HitComp->GetName());
 	UE_LOG(LogTemp, Warning, TEXT("Other Actor: %s"), *OtherActor->GetName());
 	UE_LOG(LogTemp, Warning, TEXT("Other Component: %s"), *OtherComp->GetName());
+
+	
 }
 
 // Called every frame
 void AProjectile::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
