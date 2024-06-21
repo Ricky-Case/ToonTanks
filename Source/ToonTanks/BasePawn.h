@@ -31,4 +31,7 @@ private:
 	float rotateTurretSpeed = 10.0f;
 	UPROPERTY(EditAnywhere, Category = "Player Control")
 	float rotateTurretSpeedMod = 1.0f;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Combat")
+	TSubclassOf<class AProjectile> ProjectileClass;
 };
