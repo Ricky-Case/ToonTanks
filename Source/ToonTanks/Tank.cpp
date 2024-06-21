@@ -44,15 +44,15 @@ void ATank::Tick(float DeltaTime)
 			false,
 			HitResult);
 		
-		// DrawDebugSphere(
-		// 	GetWorld(),
-		// 	HitResult.ImpactPoint,
-		// 	25.0f,
-		// 	8,
-		// 	FColor::Green,
-		// 	false,
-		// 	-1.0f
-		// );
+		DrawDebugSphere(
+			GetWorld(),
+			HitResult.ImpactPoint,
+			25.0f,
+			8,
+			FColor::Green,
+			false,
+			-1.0f
+		);
 
 		RotateTurret(HitResult.ImpactPoint, DeltaTime);
 	}
@@ -62,11 +62,8 @@ void ATank::Move(float scalar)
 {
 	if(scalar != 0.0f)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Movement Scalar Value: %f"), scalar);
-		
-		float timeScale = UGameplayStatics::GetWorldDeltaSeconds(this); // Using DeltaTime to regulate speed
 		AddActorLocalOffset(
-			FVector(scalar, 0.0, 0.0) * moveSpeed * timeScale,
+			FVector(scalar, 0.0, 0.0) * moveSpeed * TimeScale(),
 			true
 		);
 	}
@@ -76,9 +73,8 @@ void ATank::Turn(float scalar)
 {
 	if(scalar != 0.0f)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Scalar Value: %f"), scalar);
-
-		float timeScale = UGameplayStatics::GetWorldDeltaSeconds(this); // Using DeltaTime to regulate speed
-		AddActorLocalRotation(FRotator(0.0, scalar, 0.0) * turnSpeed * timeScale);
+		AddActorLocalRotation(FRotator(0.0, scalar, 0.0) * turnSpeed * TimeScale());
 	}
 }
+
+float ATank::TimeScale() { return UGameplayStatics::GetWorldDeltaSeconds(this); }

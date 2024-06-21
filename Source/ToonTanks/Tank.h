@@ -23,6 +23,7 @@ private:
 	void Move(float scalar);
 	void Turn(float scalar);
 	void Rotate(float scalar);
+	float TimeScale();
 
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	class USpringArmComponent* SpringArm;
