@@ -2,6 +2,7 @@
 
 
 #include "HealthComponent.h"
+#include "kismet/GameplayStatics.h"
 
 // Sets default values for this component's properties
 UHealthComponent::UHealthComponent()
@@ -27,7 +28,15 @@ void UHealthComponent::BeginPlay()
 
 void UHealthComponent::DamageTaken(AActor* DamagedActor, float Damage, const UDamageType* DamageType, class AController* Instigator, AActor* DamageCauser)
 {
-	UE_LOG(LogTemp, Error, TEXT("DAMAGE TAKEN!"));
+	if(Damage > 0.0f && health > 0.0f)
+	{
+		UE_LOG(LogTemp, Error, TEXT("%f DAMAGE TAKEN BY %s!"), Damage, *GetOwner()->GetName());
+
+		health -= Damage;
+		if(health < 0.0f) { health -= health; }
+
+		UE_LOG(LogTemp, Warning, TEXT("HEALTH: %f"), health);
+	}
 }
 
 

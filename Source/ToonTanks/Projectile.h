@@ -35,6 +35,9 @@ private:
 	UPROPERTY(EditDefaultsOnly, Category = "Combat")
 	float maxVelocity = 1300.0f;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Combat")
+	float damage = 50.0f;
+
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
