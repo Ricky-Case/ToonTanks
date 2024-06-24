@@ -1,6 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
-
 #include "ToonTanksGameMode.h"
 #include "Kismet/GameplayStatics.h"
 #include "Tank.h"
@@ -10,7 +7,9 @@ void AToonTanksGameMode::ActorDied(AActor* DeadActor)
 {
 	if(DeadActor == Tank)
 	{
+		UE_LOG(LogTemp, Warning, TEXT("TANK DESTROYED!"));
 		Tank->HandleDestruction();
+
 		if(Tank->GetPlayerController())
 		{
 			Tank->DisableInput(Tank->GetPlayerController());
@@ -19,6 +18,7 @@ void AToonTanksGameMode::ActorDied(AActor* DeadActor)
 	}
 	else if(ATower* DestroyedTower = Cast<ATower>(DeadActor))
 	{
+		UE_LOG(LogTemp, Warning, TEXT("TOWER DESTROYED!"));
 		DestroyedTower->HandleDestruction();
 	}
 }

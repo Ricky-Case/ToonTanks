@@ -1,5 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
@@ -26,7 +24,6 @@ private:
 
 	UPROPERTY(EditAnywhere)
 	float maxHealth = 100.0f;
-
 	float health = 0.0f;
 
 	class AToonTanksGameMode* ToonTanksGameMode;

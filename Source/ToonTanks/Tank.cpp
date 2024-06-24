@@ -20,7 +20,7 @@ void ATank::BeginPlay()
 	moveSpeed *= moveSpeedModifier;
 	turnSpeed *= turnSpeedModifier;
 
-	TankPlayerController = Cast<APlayerController>(GetController());
+	PlayerController = Cast<APlayerController>(GetController());
 }
 
 void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -36,10 +36,10 @@ void ATank::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if(TankPlayerController)
+	if(PlayerController)
 	{
 		FHitResult HitResult;
-		TankPlayerController->GetHitResultUnderCursor(
+		PlayerController->GetHitResultUnderCursor(
 			ECollisionChannel::ECC_Visibility,
 			false,
 			HitResult);
@@ -66,10 +66,7 @@ void ATank::HandleDestruction()
 	SetActorTickEnabled(false);
 }
 
-APlayerController* ATank::GetPlayerController() const
-{
-	return TankPlayerController;
-}
+APlayerController* ATank::GetPlayerController() const { return PlayerController; }
 
 void ATank::Move(float scalar)
 {

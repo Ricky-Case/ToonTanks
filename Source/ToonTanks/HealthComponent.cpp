@@ -1,7 +1,5 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
-
 #include "HealthComponent.h"
+#include "GameFramework/Actor.h"
 #include "kismet/GameplayStatics.h"
 #include "ToonTanksGameMode.h"
 
@@ -33,7 +31,9 @@ void UHealthComponent::DamageTaken(AActor* DamagedActor, float Damage, const UDa
 {
 	if(Damage > 0.0f && health > 0.0f) { health -= Damage; }
 
-	if(health < 0.0f && ToonTanksGameMode) { ToonTanksGameMode->ActorDied(DamagedActor); }
+	if(health <= 0.0f && ToonTanksGameMode) { ToonTanksGameMode->ActorDied(DamagedActor); }
+
+	UE_LOG(LogTemp, Error, TEXT("%s HEALTH AT %f"), *DamagedActor->GetName(), health);
 }
 
 

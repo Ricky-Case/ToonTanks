@@ -21,7 +21,7 @@ ABasePawn::ABasePawn()
 
 void ABasePawn::HandleDestruction()
 {
-	// TODO: Visual / Sound Effects for DEATH
+	// TODO: Visual & Sound Effects for DEATH
 }
 
 void ABasePawn::BeginPlay()

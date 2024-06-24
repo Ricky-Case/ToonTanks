@@ -44,5 +44,5 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Player Control")
 	float turnSpeedModifier = 2.5;
 
-	APlayerController* TankPlayerController;
+	APlayerController* PlayerController;
 };
