@@ -6,7 +6,7 @@
 		},
 		{
 			"name": "UE5",
-			"path": "E:\\Unreal Engine 5\\UE_5.4"
+			"path": "/Users/Shared/Epic Games/UE_5.4"
 		}
 	],
 	"settings": {
@@ -23,435 +23,443 @@
 		"version": "2.0.0",
 		"tasks": [
 			{
-				"label": "ToonTanks Win64 Debug Build",
+				"label": "ToonTanks Mac Debug Build",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"ToonTanks",
-					"Win64",
+					"Mac",
 					"Debug",
-					"E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\ToonTanks.uproject",
+					"/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/ToonTanks.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "E:\\Unreal Engine 5\\UE_5.4"
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
 				}
 			},
 			{
-				"label": "ToonTanks Win64 Debug Rebuild",
+				"label": "ToonTanks Mac Debug Rebuild",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"ToonTanks",
-					"Win64",
+					"Mac",
 					"Debug",
-					"E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\ToonTanks.uproject",
+					"/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/ToonTanks.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"dependsOn": [
-					"ToonTanks Win64 Debug Clean"
+					"ToonTanks Mac Debug Clean"
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "E:\\Unreal Engine 5\\UE_5.4"
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
 				}
 			},
 			{
-				"label": "ToonTanks Win64 Debug Clean",
+				"label": "ToonTanks Mac Debug Clean",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"ToonTanks",
-					"Win64",
+					"Mac",
 					"Debug",
-					"E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\ToonTanks.uproject",
+					"/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/ToonTanks.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
+				}
+			},
+			{
+				"label": "ToonTanks Mac DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ToonTanks",
+					"Mac",
+					"DebugGame",
+					"/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/ToonTanks.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "E:\\Unreal Engine 5\\UE_5.4"
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
 				}
 			},
 			{
-				"label": "ToonTanks Win64 DebugGame Build",
+				"label": "ToonTanks Mac DebugGame Rebuild",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"ToonTanks",
-					"Win64",
+					"Mac",
 					"DebugGame",
-					"E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\ToonTanks.uproject",
-					"-waitmutex"
-				],
-				"problemMatcher": "$msCompile",
-				"type": "shell",
-				"options": {
-					"cwd": "E:\\Unreal Engine 5\\UE_5.4"
-				}
-			},
-			{
-				"label": "ToonTanks Win64 DebugGame Rebuild",
-				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
-				"args": [
-					"ToonTanks",
-					"Win64",
-					"DebugGame",
-					"E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\ToonTanks.uproject",
+					"/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/ToonTanks.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"dependsOn": [
-					"ToonTanks Win64 DebugGame Clean"
+					"ToonTanks Mac DebugGame Clean"
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "E:\\Unreal Engine 5\\UE_5.4"
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
 				}
 			},
 			{
-				"label": "ToonTanks Win64 DebugGame Clean",
+				"label": "ToonTanks Mac DebugGame Clean",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"ToonTanks",
-					"Win64",
+					"Mac",
 					"DebugGame",
-					"E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\ToonTanks.uproject",
+					"/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/ToonTanks.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
+				}
+			},
+			{
+				"label": "ToonTanks Mac Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ToonTanks",
+					"Mac",
+					"Development",
+					"/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/ToonTanks.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "E:\\Unreal Engine 5\\UE_5.4"
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
 				}
 			},
 			{
-				"label": "ToonTanks Win64 Development Build",
+				"label": "ToonTanks Mac Development Rebuild",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"ToonTanks",
-					"Win64",
+					"Mac",
 					"Development",
-					"E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\ToonTanks.uproject",
-					"-waitmutex"
-				],
-				"problemMatcher": "$msCompile",
-				"type": "shell",
-				"options": {
-					"cwd": "E:\\Unreal Engine 5\\UE_5.4"
-				}
-			},
-			{
-				"label": "ToonTanks Win64 Development Rebuild",
-				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
-				"args": [
-					"ToonTanks",
-					"Win64",
-					"Development",
-					"E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\ToonTanks.uproject",
+					"/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/ToonTanks.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"dependsOn": [
-					"ToonTanks Win64 Development Clean"
+					"ToonTanks Mac Development Clean"
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "E:\\Unreal Engine 5\\UE_5.4"
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
 				}
 			},
 			{
-				"label": "ToonTanks Win64 Development Clean",
+				"label": "ToonTanks Mac Development Clean",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"ToonTanks",
-					"Win64",
+					"Mac",
 					"Development",
-					"E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\ToonTanks.uproject",
-					"-waitmutex"
+					"/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/ToonTanks.uproject",
+					"-waitmutex",
+					"-clean"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "E:\\Unreal Engine 5\\UE_5.4"
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
 				}
 			},
 			{
-				"label": "ToonTanks Win64 Test Build",
+				"label": "ToonTanks Mac Test Build",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"ToonTanks",
-					"Win64",
+					"Mac",
 					"Test",
-					"E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\ToonTanks.uproject",
+					"/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/ToonTanks.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "E:\\Unreal Engine 5\\UE_5.4"
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
 				}
 			},
 			{
-				"label": "ToonTanks Win64 Test Rebuild",
+				"label": "ToonTanks Mac Test Rebuild",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"ToonTanks",
-					"Win64",
+					"Mac",
 					"Test",
-					"E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\ToonTanks.uproject",
+					"/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/ToonTanks.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"dependsOn": [
-					"ToonTanks Win64 Test Clean"
+					"ToonTanks Mac Test Clean"
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "E:\\Unreal Engine 5\\UE_5.4"
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
 				}
 			},
 			{
-				"label": "ToonTanks Win64 Test Clean",
+				"label": "ToonTanks Mac Test Clean",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"ToonTanks",
-					"Win64",
+					"Mac",
 					"Test",
-					"E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\ToonTanks.uproject",
-					"-waitmutex"
+					"/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/ToonTanks.uproject",
+					"-waitmutex",
+					"-clean"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "E:\\Unreal Engine 5\\UE_5.4"
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
 				}
 			},
 			{
-				"label": "ToonTanks Win64 Shipping Build",
+				"label": "ToonTanks Mac Shipping Build",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"ToonTanks",
-					"Win64",
+					"Mac",
 					"Shipping",
-					"E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\ToonTanks.uproject",
+					"/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/ToonTanks.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "E:\\Unreal Engine 5\\UE_5.4"
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
 				}
 			},
 			{
-				"label": "ToonTanks Win64 Shipping Rebuild",
+				"label": "ToonTanks Mac Shipping Rebuild",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"ToonTanks",
-					"Win64",
+					"Mac",
 					"Shipping",
-					"E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\ToonTanks.uproject",
+					"/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/ToonTanks.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"dependsOn": [
-					"ToonTanks Win64 Shipping Clean"
+					"ToonTanks Mac Shipping Clean"
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "E:\\Unreal Engine 5\\UE_5.4"
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
 				}
 			},
 			{
-				"label": "ToonTanks Win64 Shipping Clean",
+				"label": "ToonTanks Mac Shipping Clean",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"ToonTanks",
-					"Win64",
+					"Mac",
 					"Shipping",
-					"E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\ToonTanks.uproject",
+					"/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/ToonTanks.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
+				}
+			},
+			{
+				"label": "ToonTanksEditor Mac Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ToonTanksEditor",
+					"Mac",
+					"Debug",
+					"/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/ToonTanks.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "E:\\Unreal Engine 5\\UE_5.4"
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
 				}
 			},
 			{
-				"label": "ToonTanksEditor Win64 Debug Build",
+				"label": "ToonTanksEditor Mac Debug Rebuild",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"ToonTanksEditor",
-					"Win64",
+					"Mac",
 					"Debug",
-					"E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\ToonTanks.uproject",
-					"-waitmutex"
-				],
-				"problemMatcher": "$msCompile",
-				"type": "shell",
-				"options": {
-					"cwd": "E:\\Unreal Engine 5\\UE_5.4"
-				}
-			},
-			{
-				"label": "ToonTanksEditor Win64 Debug Rebuild",
-				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
-				"args": [
-					"ToonTanksEditor",
-					"Win64",
-					"Debug",
-					"E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\ToonTanks.uproject",
+					"/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/ToonTanks.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"dependsOn": [
-					"ToonTanksEditor Win64 Debug Clean"
+					"ToonTanksEditor Mac Debug Clean"
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "E:\\Unreal Engine 5\\UE_5.4"
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
 				}
 			},
 			{
-				"label": "ToonTanksEditor Win64 Debug Clean",
+				"label": "ToonTanksEditor Mac Debug Clean",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"ToonTanksEditor",
-					"Win64",
+					"Mac",
 					"Debug",
-					"E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\ToonTanks.uproject",
+					"/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/ToonTanks.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
+				}
+			},
+			{
+				"label": "ToonTanksEditor Mac DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ToonTanksEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/ToonTanks.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "E:\\Unreal Engine 5\\UE_5.4"
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
 				}
 			},
 			{
-				"label": "ToonTanksEditor Win64 DebugGame Build",
+				"label": "ToonTanksEditor Mac DebugGame Rebuild",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"ToonTanksEditor",
-					"Win64",
+					"Mac",
 					"DebugGame",
-					"E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\ToonTanks.uproject",
-					"-waitmutex"
-				],
-				"problemMatcher": "$msCompile",
-				"type": "shell",
-				"options": {
-					"cwd": "E:\\Unreal Engine 5\\UE_5.4"
-				}
-			},
-			{
-				"label": "ToonTanksEditor Win64 DebugGame Rebuild",
-				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
-				"args": [
-					"ToonTanksEditor",
-					"Win64",
-					"DebugGame",
-					"E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\ToonTanks.uproject",
+					"/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/ToonTanks.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"dependsOn": [
-					"ToonTanksEditor Win64 DebugGame Clean"
+					"ToonTanksEditor Mac DebugGame Clean"
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "E:\\Unreal Engine 5\\UE_5.4"
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
 				}
 			},
 			{
-				"label": "ToonTanksEditor Win64 DebugGame Clean",
+				"label": "ToonTanksEditor Mac DebugGame Clean",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"ToonTanksEditor",
-					"Win64",
+					"Mac",
 					"DebugGame",
-					"E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\ToonTanks.uproject",
+					"/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/ToonTanks.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
+				}
+			},
+			{
+				"label": "ToonTanksEditor Mac Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"ToonTanksEditor",
+					"Mac",
+					"Development",
+					"/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/ToonTanks.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "E:\\Unreal Engine 5\\UE_5.4"
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
 				}
 			},
 			{
-				"label": "ToonTanksEditor Win64 Development Build",
+				"label": "ToonTanksEditor Mac Development Rebuild",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"ToonTanksEditor",
-					"Win64",
+					"Mac",
 					"Development",
-					"E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\ToonTanks.uproject",
-					"-waitmutex"
-				],
-				"problemMatcher": "$msCompile",
-				"type": "shell",
-				"options": {
-					"cwd": "E:\\Unreal Engine 5\\UE_5.4"
-				}
-			},
-			{
-				"label": "ToonTanksEditor Win64 Development Rebuild",
-				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Build.bat",
-				"args": [
-					"ToonTanksEditor",
-					"Win64",
-					"Development",
-					"E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\ToonTanks.uproject",
+					"/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/ToonTanks.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
 				"dependsOn": [
-					"ToonTanksEditor Win64 Development Clean"
+					"ToonTanksEditor Mac Development Clean"
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "E:\\Unreal Engine 5\\UE_5.4"
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
 				}
 			},
 			{
-				"label": "ToonTanksEditor Win64 Development Clean",
+				"label": "ToonTanksEditor Mac Development Clean",
 				"group": "build",
-				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
 				"args": [
 					"ToonTanksEditor",
-					"Win64",
+					"Mac",
 					"Development",
-					"E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\ToonTanks.uproject",
-					"-waitmutex"
+					"/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/ToonTanks.uproject",
+					"-waitmutex",
+					"-clean"
 				],
 				"problemMatcher": "$msCompile",
 				"type": "shell",
 				"options": {
-					"cwd": "E:\\Unreal Engine 5\\UE_5.4"
+					"cwd": "/Users/Shared/Epic Games/UE_5.4"
 				}
 			}
 		]
@@ -462,151 +470,104 @@
 			{
 				"name": "Launch ToonTanks (Debug)",
 				"request": "launch",
-				"program": "E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\Binaries\\Win64\\UnrealGame-Win64-Debug.exe",
-				"preLaunchTask": "ToonTanks Win64 Debug Build",
+				"program": "/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/Binaries/Mac/UnrealGame-Mac-Debug.app/Contents/MacOS/UnrealGame-Mac-Debug",
+				"preLaunchTask": "ToonTanks Mac Debug Build",
 				"args": [
 				],
-				"cwd": "E:\\Unreal Engine 5\\UE_5.4",
-				"stopAtEntry": false,
-				"console": "integratedTerminal",
-				"type": "cppvsdbg",
-				"visualizerFile": "E:\\Unreal Engine 5\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
-				"sourceFileMap": {
-					"D:\\build\\++UE5\\Sync": "E:\\Unreal Engine 5\\UE_5.4"
-				}
+				"cwd": "/Users/Shared/Epic Games/UE_5.4",
+				"type": "lldb"
 			},
 			{
 				"name": "Launch ToonTanks (DebugGame)",
 				"request": "launch",
-				"program": "E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\Binaries\\Win64\\UnrealGame-Win64-DebugGame.exe",
-				"preLaunchTask": "ToonTanks Win64 DebugGame Build",
+				"program": "/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/Binaries/Mac/UnrealGame-Mac-DebugGame.app/Contents/MacOS/UnrealGame-Mac-DebugGame",
+				"preLaunchTask": "ToonTanks Mac DebugGame Build",
 				"args": [
 				],
-				"cwd": "E:\\Unreal Engine 5\\UE_5.4",
-				"stopAtEntry": false,
-				"console": "integratedTerminal",
-				"type": "cppvsdbg",
-				"visualizerFile": "E:\\Unreal Engine 5\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
-				"sourceFileMap": {
-					"D:\\build\\++UE5\\Sync": "E:\\Unreal Engine 5\\UE_5.4"
-				}
+				"cwd": "/Users/Shared/Epic Games/UE_5.4",
+				"type": "lldb"
 			},
 			{
 				"name": "Launch ToonTanks (Development)",
 				"request": "launch",
-				"program": "E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\Binaries\\Win64\\UnrealGame.exe",
-				"preLaunchTask": "ToonTanks Win64 Development Build",
+				"program": "/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/Binaries/Mac/UnrealGame.app/Contents/MacOS/UnrealGame",
+				"preLaunchTask": "ToonTanks Mac Development Build",
 				"args": [
 				],
-				"cwd": "E:\\Unreal Engine 5\\UE_5.4",
-				"stopAtEntry": false,
-				"console": "integratedTerminal",
-				"type": "cppvsdbg",
-				"visualizerFile": "E:\\Unreal Engine 5\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
-				"sourceFileMap": {
-					"D:\\build\\++UE5\\Sync": "E:\\Unreal Engine 5\\UE_5.4"
-				}
+				"cwd": "/Users/Shared/Epic Games/UE_5.4",
+				"type": "lldb"
 			},
 			{
 				"name": "Launch ToonTanks (Test)",
 				"request": "launch",
-				"program": "E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\Binaries\\Win64\\UnrealGame-Win64-Test.exe",
-				"preLaunchTask": "ToonTanks Win64 Test Build",
+				"program": "/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/Binaries/Mac/UnrealGame-Mac-Test.app/Contents/MacOS/UnrealGame-Mac-Test",
+				"preLaunchTask": "ToonTanks Mac Test Build",
 				"args": [
 				],
-				"cwd": "E:\\Unreal Engine 5\\UE_5.4",
-				"stopAtEntry": false,
-				"console": "integratedTerminal",
-				"type": "cppvsdbg",
-				"visualizerFile": "E:\\Unreal Engine 5\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
-				"sourceFileMap": {
-					"D:\\build\\++UE5\\Sync": "E:\\Unreal Engine 5\\UE_5.4"
-				}
+				"cwd": "/Users/Shared/Epic Games/UE_5.4",
+				"type": "lldb"
 			},
 			{
 				"name": "Launch ToonTanks (Shipping)",
 				"request": "launch",
-				"program": "E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\Binaries\\Win64\\UnrealGame-Win64-Shipping.exe",
-				"preLaunchTask": "ToonTanks Win64 Shipping Build",
+				"program": "/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/Binaries/Mac/UnrealGame-Mac-Shipping.app/Contents/MacOS/UnrealGame-Mac-Shipping",
+				"preLaunchTask": "ToonTanks Mac Shipping Build",
 				"args": [
 				],
-				"cwd": "E:\\Unreal Engine 5\\UE_5.4",
-				"stopAtEntry": false,
-				"console": "integratedTerminal",
-				"type": "cppvsdbg",
-				"visualizerFile": "E:\\Unreal Engine 5\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
-				"sourceFileMap": {
-					"D:\\build\\++UE5\\Sync": "E:\\Unreal Engine 5\\UE_5.4"
-				}
+				"cwd": "/Users/Shared/Epic Games/UE_5.4",
+				"type": "lldb"
 			},
 			{
 				"name": "Launch ToonTanksEditor (Debug)",
 				"request": "launch",
-				"program": "E:\\Unreal Engine 5\\UE_5.4\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-Debug.exe",
-				"preLaunchTask": "ToonTanksEditor Win64 Debug Build",
+				"program": "/Users/Shared/Epic Games/UE_5.4/Engine/Binaries/Mac/UnrealEditor-Mac-Debug.app/Contents/MacOS/UnrealEditor-Mac-Debug",
+				"preLaunchTask": "ToonTanksEditor Mac Debug Build",
 				"args": [
-					"E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\ToonTanks.uproject"
+					"/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/ToonTanks.uproject"
 				],
-				"cwd": "E:\\Unreal Engine 5\\UE_5.4",
-				"stopAtEntry": false,
-				"console": "integratedTerminal",
-				"type": "cppvsdbg",
-				"visualizerFile": "E:\\Unreal Engine 5\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
-				"sourceFileMap": {
-					"D:\\build\\++UE5\\Sync": "E:\\Unreal Engine 5\\UE_5.4"
-				}
+				"cwd": "/Users/Shared/Epic Games/UE_5.4",
+				"type": "lldb"
 			},
 			{
 				"name": "Launch ToonTanksEditor (DebugGame)",
 				"request": "launch",
-				"program": "E:\\Unreal Engine 5\\UE_5.4\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-DebugGame.exe",
-				"preLaunchTask": "ToonTanksEditor Win64 DebugGame Build",
+				"program": "/Users/Shared/Epic Games/UE_5.4/Engine/Binaries/Mac/UnrealEditor-Mac-DebugGame.app/Contents/MacOS/UnrealEditor-Mac-DebugGame",
+				"preLaunchTask": "ToonTanksEditor Mac DebugGame Build",
 				"args": [
-					"E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\ToonTanks.uproject"
+					"/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/ToonTanks.uproject"
 				],
-				"cwd": "E:\\Unreal Engine 5\\UE_5.4",
-				"stopAtEntry": false,
-				"console": "integratedTerminal",
-				"type": "cppvsdbg",
-				"visualizerFile": "E:\\Unreal Engine 5\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
-				"sourceFileMap": {
-					"D:\\build\\++UE5\\Sync": "E:\\Unreal Engine 5\\UE_5.4"
-				}
+				"cwd": "/Users/Shared/Epic Games/UE_5.4",
+				"type": "lldb"
 			},
 			{
 				"name": "Launch ToonTanksEditor (Development)",
 				"request": "launch",
-				"program": "E:\\Unreal Engine 5\\UE_5.4\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
-				"preLaunchTask": "ToonTanksEditor Win64 Development Build",
+				"program": "/Users/Shared/Epic Games/UE_5.4/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor",
+				"preLaunchTask": "ToonTanksEditor Mac Development Build",
 				"args": [
-					"E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\ToonTanks.uproject"
+					"/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/ToonTanks.uproject"
 				],
-				"cwd": "E:\\Unreal Engine 5\\UE_5.4",
-				"stopAtEntry": false,
-				"console": "integratedTerminal",
-				"type": "cppvsdbg",
-				"visualizerFile": "E:\\Unreal Engine 5\\UE_5.4\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
-				"sourceFileMap": {
-					"D:\\build\\++UE5\\Sync": "E:\\Unreal Engine 5\\UE_5.4"
-				}
+				"cwd": "/Users/Shared/Epic Games/UE_5.4",
+				"type": "lldb"
 			},
 			{
 				"name": "Generate Project Files",
 				"type": "coreclr",
 				"request": "launch",
-				"preLaunchTask": "UnrealBuildTool Win64 Development Build",
-				"program": "E:\\Unreal Engine 5\\UE_5.4\\Engine\\Build\\BatchFiles\\RunUBT.bat",
+				"preLaunchTask": "UnrealBuildTool Mac Development Build",
+				"program": "/Users/Shared/Epic Games/UE_5.4/Engine/Build/BatchFiles/RunUBT.bat",
 				"args": [
 					"-projectfiles",
 					"-vscode",
-					"-project=E:\\Projects\\Personal\\Udemy\\Unreal Engine 5\\ToonTanks\\ToonTanks.uproject",
+					"-project=/Users/atkstat/Documents/Unreal Projects/Udemy/ToonTanks/ToonTanks.uproject",
 					"-game",
 					"-engine",
 					"-dotnet"
 				],
-				"console": "integratedTerminal",
+				"console": "internalConsole",
+				"internalConsoleOptions": "openOnSessionStart",
 				"stopAtEntry": false,
-				"cwd": "E:\\Unreal Engine 5\\UE_5.4"
+				"cwd": "/Users/Shared/Epic Games/UE_5.4"
 			}
 		]
 	}

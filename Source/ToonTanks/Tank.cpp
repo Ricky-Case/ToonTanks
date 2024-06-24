@@ -60,21 +60,17 @@ void ATank::Tick(float DeltaTime)
 
 void ATank::Move(float scalar)
 {
-	if(scalar != 0.0f)
-	{
-		AddActorLocalOffset(
-			FVector(scalar, 0.0, 0.0) * moveSpeed * TimeScale(),
-			true
-		);
-	}
+	AddActorLocalOffset(
+		FVector(scalar, 0.0, 0.0) * moveSpeed * TimeScale(),
+		true
+	);
 }
 
 void ATank::Turn(float scalar)
 {
-	if(scalar != 0.0f)
-	{
-		AddActorLocalRotation(FRotator(0.0, scalar, 0.0) * turnSpeed * TimeScale());
-	}
+	AddActorLocalRotation(
+		FRotator(0.0, scalar, 0.0) * turnSpeed * TimeScale()
+	);
 }
 
 float ATank::TimeScale() { return UGameplayStatics::GetWorldDeltaSeconds(this); }
