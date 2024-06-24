@@ -29,6 +29,8 @@ private:
 
 	float health = 0.0f;
 
+	class AToonTanksGameMode* ToonTanksGameMode;
+
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;

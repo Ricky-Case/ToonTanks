@@ -13,8 +13,9 @@ public:
 	ATank();
 
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
 	virtual void Tick(float DeltaTime) override;
+	void HandleDestruction();
+	APlayerController* GetPlayerController() const;
 
 protected:
 	virtual void BeginPlay() override;
@@ -43,5 +44,5 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Player Control")
 	float turnSpeedModifier = 2.5;
 
-	APlayerController* PlayerControllerRef;
+	APlayerController* TankPlayerController;
 };

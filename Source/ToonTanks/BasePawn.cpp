@@ -19,6 +19,11 @@ ABasePawn::ABasePawn()
 	ProjectileSpawn->SetupAttachment(TurretMesh);
 }
 
+void ABasePawn::HandleDestruction()
+{
+	// TODO: Visual / Sound Effects for DEATH
+}
+
 void ABasePawn::BeginPlay()
 {
 	Super::BeginPlay();
