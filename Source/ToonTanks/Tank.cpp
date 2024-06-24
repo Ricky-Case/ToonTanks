@@ -78,9 +78,21 @@ void ATank::Move(float scalar)
 
 void ATank::Turn(float scalar)
 {
-	AddActorLocalRotation(
-		FRotator(0.0, scalar, 0.0) * turnSpeed * TimeScale()
-	);
+	if(GetInputAxisValue(TEXT("MoveForward")) < 0.0f)
+	{
+		AddActorLocalRotation(
+			FRotator(0.0, -scalar, 0.0) * turnSpeed * TimeScale()
+		);
+	}
+	else
+	{
+		AddActorLocalRotation(
+			FRotator(0.0, scalar, 0.0) * turnSpeed * TimeScale()
+		);
+	}
+	// AddActorLocalRotation(
+	// 	FRotator(0.0, scalar, 0.0) * turnSpeed * TimeScale()
+	// );
 }
 
 float ATank::TimeScale() { return UGameplayStatics::GetWorldDeltaSeconds(this); }
