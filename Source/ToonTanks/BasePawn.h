@@ -5,6 +5,7 @@
 #include "BasePawn.generated.h"
 
 class AProjectile;
+class UCameraShakeBase;
 class UCapsuleComponent;
 class UParticleSystem;
 
@@ -40,7 +41,9 @@ private:
 	float rotateTurretSpeedMod = 1.0f;
 	UPROPERTY(EditAnywhere, Category = "Combat")
 	USoundBase* DeathSound;
-
+	
 	UPROPERTY(EditDefaultsOnly, Category = "Combat")
 	TSubclassOf<AProjectile> ProjectileClass;
+	UPROPERTY(EditAnywhere, Category = "Combat")
+	TSubclassOf<UCameraShakeBase> DeathCameraShakeClass;
 };

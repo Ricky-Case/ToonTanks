@@ -1,5 +1,6 @@
 #include "BasePawn.h"
 #include "Components/CapsuleComponent.h"
+#include "Camera/CameraShakeBase.h"
 #include "Kismet/GameplayStatics.h"
 #include "Particles/ParticleSystem.h"
 #include "Projectile.h"
@@ -24,8 +25,8 @@ ABasePawn::ABasePawn()
 void ABasePawn::HandleDestruction()
 {
 	if(ExplosionParticles) { UGameplayStatics::SpawnEmitterAtLocation(this, ExplosionParticles, GetActorLocation(), GetActorRotation()); }
-	
 	if(DeathSound) { UGameplayStatics::PlaySoundAtLocation(this, DeathSound, GetActorLocation()); }
+	if(DeathCameraShakeClass) { GetWorld()->GetFirstPlayerController()->ClientStartCameraShake(DeathCameraShakeClass); }
 }
 
 void ABasePawn::BeginPlay()

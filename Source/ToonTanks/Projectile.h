@@ -6,6 +6,7 @@
 #include "GameFramework/Actor.h"
 #include "Projectile.generated.h"
 
+class UCameraShakeBase;
 class UParticleSystem;
 class UParticleSystemComponent;
 class UProjectileMovementComponent;
@@ -54,6 +55,9 @@ private:
 
 	UPROPERTY(EditAnywhere, Category = "Combat")
 	USoundBase* HitSound;
+
+	UPROPERTY(EditAnywhere, Category = "Combat")
+	TSubclassOf<UCameraShakeBase> HitCameraShakeClass;
 
 public:
 	// Called every frame
