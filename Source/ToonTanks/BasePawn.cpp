@@ -25,7 +25,7 @@ void ABasePawn::HandleDestruction()
 {
 	if(ExplosionParticles) { UGameplayStatics::SpawnEmitterAtLocation(this, ExplosionParticles, GetActorLocation(), GetActorRotation()); }
 	
-	// TODO: Sound Effects for DEATH
+	if(DeathSound) { UGameplayStatics::PlaySoundAtLocation(this, DeathSound, GetActorLocation()); }
 }
 
 void ABasePawn::BeginPlay()
