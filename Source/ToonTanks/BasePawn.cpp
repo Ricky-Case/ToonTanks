@@ -1,5 +1,7 @@
 #include "BasePawn.h"
 #include "Components/CapsuleComponent.h"
+#include "Kismet/GameplayStatics.h"
+#include "Particles/ParticleSystem.h"
 #include "Projectile.h"
 
 ABasePawn::ABasePawn()
@@ -21,7 +23,9 @@ ABasePawn::ABasePawn()
 
 void ABasePawn::HandleDestruction()
 {
-	// TODO: Visual & Sound Effects for DEATH
+	if(ExplosionParticles) { UGameplayStatics::SpawnEmitterAtLocation(this, ExplosionParticles, GetActorLocation(), GetActorRotation()); }
+	
+	// TODO: Sound Effects for DEATH
 }
 
 void ABasePawn::BeginPlay()

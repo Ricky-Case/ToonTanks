@@ -28,6 +28,8 @@ private:
 	UStaticMeshComponent* TurretMesh;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	USceneComponent* ProjectileSpawn;
+	UPROPERTY(EditAnywhere, Category = "Combat")
+	class UParticleSystem* ExplosionParticles;
 
 	UPROPERTY(EditAnywhere, Category = "Player Control")
 	float rotateTurretSpeed = 10.0f;

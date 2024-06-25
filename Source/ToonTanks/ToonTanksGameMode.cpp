@@ -8,7 +8,6 @@ void AToonTanksGameMode::ActorDied(AActor* DeadActor)
 {
 	if(DeadActor == Tank)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("TANK DESTROYED!"));
 		Tank->HandleDestruction();
 
 		if(ToonTanksPlayerController)
@@ -20,7 +19,6 @@ void AToonTanksGameMode::ActorDied(AActor* DeadActor)
 	}
 	else if(ATower* DestroyedTower = Cast<ATower>(DeadActor))
 	{
-		UE_LOG(LogTemp, Warning, TEXT("TOWER DESTROYED!"));
 		DestroyedTower->HandleDestruction();
 
 		if(--towerCount <= 0) { GameOver(true); }
