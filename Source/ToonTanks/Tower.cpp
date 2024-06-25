@@ -36,7 +36,13 @@ void ATower::BeginPlay()
 		);
 }
 
-void ATower::CheckFireCondition() { if(InFireRange()) { Fire(); } }
+void ATower::CheckFireCondition()
+{
+	if(Tank)
+	{
+		if(InFireRange() && Tank->bAlive) { Fire(); }
+	}
+}
 
 bool ATower::InFireRange()
 {

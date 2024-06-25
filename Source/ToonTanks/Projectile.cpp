@@ -36,7 +36,8 @@ void AProjectile::BeginPlay()
 
 void AProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
-	auto owner = GetOwner();
+	AActor* owner = GetOwner();
+	
 	if(owner && OtherActor && (OtherActor != this) && (OtherActor != owner))
 	{
 		UGameplayStatics::ApplyDamage(OtherActor, damage, owner->GetInstigatorController(), this, UDamageType::StaticClass());

@@ -54,6 +54,7 @@ void ATank::HandleDestruction()
 
 	SetActorHiddenInGame(true);
 	SetActorTickEnabled(false);
+	bAlive = false;
 }
 
 APlayerController* ATank::GetPlayerController() const { return PlayerController; }
