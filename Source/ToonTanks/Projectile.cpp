@@ -35,8 +35,10 @@ void AProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimi
 	if(owner && OtherActor && (OtherActor != this) && (OtherActor != owner))
 	{
 		UGameplayStatics::ApplyDamage(OtherActor, damage, owner->GetInstigatorController(), this, UDamageType::StaticClass());
-		Destroy();
+		if(HitParticles) { UGameplayStatics::SpawnEmitterAtLocation(this, HitParticles, GetActorLocation(), GetActorRotation()); }
 	}
+
+	Destroy();
 }
 
 // Called every frame

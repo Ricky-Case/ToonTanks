@@ -43,16 +43,6 @@ void ATank::Tick(float DeltaTime)
 			ECollisionChannel::ECC_Visibility,
 			false,
 			HitResult);
-		
-		DrawDebugSphere(
-			GetWorld(),
-			HitResult.ImpactPoint,
-			25.0f,
-			8,
-			FColor::Green,
-			false,
-			-1.0f
-		);
 
 		RotateTurret(HitResult.ImpactPoint, DeltaTime);
 	}
@@ -90,9 +80,6 @@ void ATank::Turn(float scalar)
 			FRotator(0.0, scalar, 0.0) * turnSpeed * TimeScale()
 		);
 	}
-	// AddActorLocalRotation(
-	// 	FRotator(0.0, scalar, 0.0) * turnSpeed * TimeScale()
-	// );
 }
 
 float ATank::TimeScale() { return UGameplayStatics::GetWorldDeltaSeconds(this); }
