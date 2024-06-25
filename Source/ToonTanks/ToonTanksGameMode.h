@@ -18,11 +18,16 @@ protected:
 	UFUNCTION(BlueprintImplementableEvent)
 	void StartGame();
 
+	UFUNCTION(BlueprintImplementableEvent)
+	void GameOver(bool bWonGame);
+
 private:
 	void HandleGameStart();
+	int32 GetTowerCount() const;
 
 	class ATank* Tank;
 	class AToonTanksPlayerController* ToonTanksPlayerController;
+	int32 towerCount = 0;
 
 	UPROPERTY(EditAnywhere)
 	float startDelay = 3.0f;
